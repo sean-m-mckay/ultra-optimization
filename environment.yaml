@@ -1,0 +1,15 @@
+name: 'ultra-optimization'
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - ipykernel
+    - pandas
+    - matplotlib
+    - plotly
+    - geopandas
+    - osmnx
+    - gpxpy
+    - pip
+    - pip:
+      - -e postman_problems
