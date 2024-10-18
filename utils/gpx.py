@@ -56,7 +56,6 @@ def gpx_points_to_osmnx_route(points_df, graph, threshold_dist):
     for id, point in points_df.iterrows():
         curr_point = (point.longitude, point.latitude)
         cand_node, dist_to_node = ox.nearest_nodes(graph, X=curr_point[0], Y=curr_point[1], return_dist=True)
-        #print(f"Distance to Origin node is {dist_to_node} for node {cand_node} from {curr_point}")
     
         if dist_to_node < threshold_dist:
             if cand_node != curr_node:
